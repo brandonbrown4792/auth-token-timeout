@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import { setAuthToken } from './auth/authTokenTimeout';
 
+// setAuthToken should be called anytime you receive your auth token from the backend (login/signup/etc).
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => setAuthToken('auth-token')}>Set Auth Token</button>
     </div>
-  );
+  )
 }
 
 export default App;
